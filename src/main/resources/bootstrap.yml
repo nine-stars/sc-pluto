@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: sc-pluto
+  profiles:
+    active: test
+  cloud:
+    config:
+      enable: true
+      uri: http://localhost:9999

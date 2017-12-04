@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by zhangshukang on 2017/11/10.
  */
-@FeignClient(name = "ak")
+@FeignClient(name = "sc-pluto")
 public interface ContentsFeign1 {
 
     @RequestMapping(value = "/content",method = RequestMethod.GET)

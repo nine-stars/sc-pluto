@@ -20,7 +20,6 @@ import org.springframework.web.client.RestTemplate;
 @EnableFeignClients
 @EnableEurekaClient
 @EnableHystrix
-@EnableDiscoveryClient
 //@SpringCloudApplication
 //@EnableCircuitBreaker
 @RefreshScope

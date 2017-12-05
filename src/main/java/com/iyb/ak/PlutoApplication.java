@@ -1,5 +1,7 @@
 package com.iyb.ak;
 
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +16,6 @@ import org.springframework.http.converter.ByteArrayHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 
-@EnableAutoConfiguration
 @SpringBootApplication
 @ComponentScan(basePackages={"com.iyb.ak"})
 @EnableFeignClients
@@ -22,11 +23,19 @@ import org.springframework.web.client.RestTemplate;
 @EnableHystrix
 //@SpringCloudApplication
 //@EnableCircuitBreaker
-@RefreshScope
-public class PlutoApplication {
+//@RefreshScope
+@Slf4j
+public class PlutoApplication implements CommandLineRunner{
 
 	public static void main(String[] args) {
 		SpringApplication.run(PlutoApplication.class, args);
+	}
+
+
+
+	@Override
+	public void run(String... args) throws Exception {
+		log.info(">>>>>>>>>>>>>>> sc-pluto 启动完成<<<<<<<<<<<<<");
 	}
 
 

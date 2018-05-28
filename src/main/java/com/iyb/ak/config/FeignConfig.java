@@ -1,13 +1,14 @@
 package com.iyb.ak.config;
 
-import feign.Request;
 import feign.RetryableException;
 import feign.Retryer;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
+/**
+ * @author zhangshukang
+ */
 @Configuration
 public class FeignConfig {
 //	@Value("${ak.ribbon.ConnectTimeout}")

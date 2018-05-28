@@ -1,8 +1,8 @@
 spring:
   application:
     name: sc-pluto
-   profile:
-      active: dev
+#  profiles:
+#    active: pre
 
   cloud:
     config:
@@ -10,13 +10,12 @@ spring:
       discovery:
         enabled: true
         serviceId: sc-earth-config-server
-      profile: pre
       label: master
+      profile: pre
 
 management:
   security:
     enabled: true
-
 
 
 # Eureka
@@ -30,3 +29,4 @@ eureka:
       defaultZone: http://user:password@localhost:8761/eureka/
     register-with-eureka: true
     fetch-registry: true
+

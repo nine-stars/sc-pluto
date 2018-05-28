@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -37,7 +38,10 @@ public class ContentsController {
     @RequestMapping(method = RequestMethod.GET)
     @HystrixCommand(fallbackMethod = "contentFallback")
     public List<Contents> getContents() {
-        return contentsFeign1.getContents();
+        log.info("调用链 sc-pluto");
+
+        contentsFeign1.getContents();
+        return new ArrayList<>();
     }
 
 
